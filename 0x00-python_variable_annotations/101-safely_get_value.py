@@ -15,10 +15,11 @@ from typing import Any, Mapping, TypeVar, Union
 
 
 T = TypeVar('T')
+Def = Union[T, None]
+Ret = Union[Any, T]
 
 
-def safely_get_value(dct: Mapping, key: Any, default: Union[T, None])\
-    -> Union[Any, T]:
+def safely_get_value(dct: Mapping, key: Any, default: Def) -> Ret:
     """
     Function definition
     """
