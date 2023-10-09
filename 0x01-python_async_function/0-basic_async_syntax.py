@@ -7,7 +7,7 @@ from random import uniform
 import asyncio
 
 
-async def wait_random(max_delay=10):
+async def wait_random(max_delay: int = 10) -> float:
     """
     Function that writes an asynchronous coroutine
     Args:
@@ -15,7 +15,7 @@ async def wait_random(max_delay=10):
     Returns:
         delay (float): random waiting time for the coroutine
     """
-    delay = uniform(0, max_delay)
+    delay: float = uniform(0, max_delay)
     await asyncio.sleep(delay)
 
     return delay
