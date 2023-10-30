@@ -7,7 +7,8 @@ from utils import access_nested_map
 
 
 class TestAccessNestedMap(TestCase):
-    """Unit Test for utils.access_nested_map"""
+    """Unit Test for utils.access_nested_map
+    """
 
     @parameterized.expand([
         ({"a": 1}, ("a",), 1),
@@ -16,5 +17,4 @@ class TestAccessNestedMap(TestCase):
     ])
     def test_access_nested_map(self, nested_map, path, expected):
         """Test method for utils.access_nested_map"""
-        got = access_nested_map(nested_map, path)
-        self.assertEqual(got, expected)
+        self.assertEqual(access_nested_map(nested_map, path), expected)
