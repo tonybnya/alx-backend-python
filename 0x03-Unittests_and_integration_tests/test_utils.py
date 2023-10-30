@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Parameterize a unit test
 """
-import unittest
+from unittest import TestCase
 from parameterized import parameterized
 from utils import access_nested_map
 
 
-class TestAccessNestedMap(unittest.TestCase):
+class TestAccessNestedMap(TestCase):
     """Unit Test for utils.access_nested_map"""
 
     @parameterized.expand(
